@@ -17,9 +17,11 @@ public class NucleoConhecimento {
     private String nucleo;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name = "area_id", nullable = false)
     private Area area;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name = "facilitador_id", nullable = false)
     private Facilitador facilitador;
 
     @Column(columnDefinition = "TEXT", nullable = false)

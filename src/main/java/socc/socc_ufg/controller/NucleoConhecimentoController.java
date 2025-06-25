@@ -2,6 +2,7 @@ package socc.socc_ufg.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping; // << Adicionado este import
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -28,9 +29,19 @@ public class NucleoConhecimentoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(dto));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<NucleoConhecimentoResponseDTO> consultar(@PathVariable Long id) {
+        try {
+            NucleoConhecimentoResponseDTO responseDTO = service.buscarPorId(id);
+            return ResponseEntity.ok(responseDTO);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
     @PutMapping("/{id}")
     public ResponseEntity<NucleoConhecimentoResponseDTO> editar(@PathVariable Long id, @RequestBody NucleoConhecimentoRequestDTO dto) {
         return ResponseEntity.ok(service.editar(id, dto));
     }
 }
-

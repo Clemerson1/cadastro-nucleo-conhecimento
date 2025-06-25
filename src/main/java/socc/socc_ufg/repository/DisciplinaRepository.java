@@ -4,4 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import socc.socc_ufg.model.Disciplina;
 
-public interface DisciplinaRepository extends JpaRepository<Disciplina, Long> {}
+import java.util.Optional;
+
+public interface DisciplinaRepository extends JpaRepository<Disciplina, Long> {
+    Optional<Disciplina> findByNome(String nomeDisciplina);
+}
