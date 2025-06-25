@@ -1,6 +1,7 @@
 package socc.socc_ufg.repository;
 
-import com.seuusuario.seuprojeto.model.NucleoConhecimento;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import socc.socc_ufg.model.NucleoConhecimento;
 
 public interface NucleoConhecimentoRepository extends JpaRepository<NucleoConhecimento, Long> {}

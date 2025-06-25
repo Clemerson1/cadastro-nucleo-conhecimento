@@ -1,10 +1,18 @@
 package socc.socc_ufg.service;
 
-import com.seuusuario.seuprojeto.dto.*;
-import com.seuusuario.seuprojeto.model.*;
-import com.seuusuario.seuprojeto.repository.*;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+import socc.socc_ufg.dto.NucleoConhecimentoRequestDTO;
+import socc.socc_ufg.dto.NucleoConhecimentoResponseDTO;
+import socc.socc_ufg.model.Disciplina;
+import socc.socc_ufg.model.Docente;
+import socc.socc_ufg.model.NucleoConhecimento;
+import socc.socc_ufg.repository.AreaRepository;
+import socc.socc_ufg.repository.DisciplinaRepository;
+import socc.socc_ufg.repository.DocenteRepository;
+import socc.socc_ufg.repository.FacilitadorRepository;
+import socc.socc_ufg.repository.NucleoConhecimentoRepository;
 
 @Service
 @RequiredArgsConstructor

@@ -1,6 +1,7 @@
 package socc.socc_ufg.repository;
 
-import com.seuusuario.seuprojeto.model.Facilitador;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import socc.socc_ufg.model.Facilitador;
 
 public interface FacilitadorRepository extends JpaRepository<Facilitador, Long> {}

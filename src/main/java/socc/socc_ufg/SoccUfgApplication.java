@@ -5,9 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SoccUfgApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SoccUfgApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(SoccUfgApplication.class, args);
+        System.out.println("Aplicação Spring Boot iniciou corretamente!");
+    }
 }
